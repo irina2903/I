@@ -33,7 +33,7 @@ public class ComicsFilmsAdapter extends ArrayAdapter{
         textView.setText(comicsFilms.title);
 
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
-        Picasso.with(getContext()).load("https://upload.wikimedia.org/wikipedia/ru/5/5f/Spiderman_movie.jpg").fit().into(imageView);
+        Picasso.with(getContext()).load(comicsFilms.photo).fit().into(imageView);
 
         return view;
 
