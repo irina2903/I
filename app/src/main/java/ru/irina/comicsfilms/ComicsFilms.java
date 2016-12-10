@@ -1,9 +1,11 @@
 package ru.irina.comicsfilms;
 
+import java.io.Serializable;
+
 /**
  * Created by User on 12/3/2016.
  */
-public class ComicsFilms {
+public class ComicsFilms implements Serializable {
     public String title;
     String photo;
     String названииеКинокомпании;
@@ -25,6 +27,8 @@ public class ComicsFilms {
     public String toString() {
         return title;
     }
+
+
 
 }
 

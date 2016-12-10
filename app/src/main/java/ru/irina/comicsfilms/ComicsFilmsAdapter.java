@@ -33,7 +33,7 @@ public class ComicsFilmsAdapter extends ArrayAdapter{
         textView.setText(comicsFilms.title);
 
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
-        Picasso.with(getContext()).load(comicsFilms.photo).fit().into(imageView);
+        Picasso.with(getContext()).load(comicsFilms.photo).fit().centerCrop().into(imageView);
 
         return view;
 

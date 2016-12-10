@@ -1,9 +1,12 @@
 package ru.irina.comicsfilms;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -46,6 +49,19 @@ public class MainActivity extends AppCompatActivity {
         int itemLayout = android.R.layout.simple_list_item_1;
         ArrayAdapter adapter = new ComicsFilmsAdapter(this, itemLayout, фильмы);
         listView.setAdapter(adapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ComicsFilms choosedComicsFilm = фильмы[position];
+
+                Intent intent = new Intent(MainActivity.this, ComicsFilmsActivity.class);
+                intent.putExtra("КОМИКСЫ", choosedComicsFilm);
+                startActivity(intent);
+
+            }
+        });
 
 
 

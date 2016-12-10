@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
+
 /**
  * Created by ГЭМ on 10.12.2016.
  */
@@ -17,17 +19,18 @@ public class ComicsFilmsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.comicsfilms);
+        setContentView(R.layout.comics_films);
 
-
-        String photo = getIntent().getStringExtra("ФОТОГРАФИЯ");
-        String названииеКинокомпании = getIntent().getStringExtra("НАЗВАНИЕ");
+        ComicsFilms comicsFilms = (ComicsFilms) getIntent().getSerializableExtra("КОМИКСЫ");
 
         TextView titleTextView = (TextView) findViewById(R.id.textView2);
-        titleTextView.setText(названииеКинокомпании);
+        titleTextView.setText(comicsFilms.title);
 
         ImageView photoImageView = (ImageView) findViewById(R.id.imageView2);
-        Picasso.with(this).load(photo).fit().into(photoImageView);
+        Picasso.with(this).load(comicsFilms.photo).fit().centerCrop().into(photoImageView);
+
+
+
 
 
     }
