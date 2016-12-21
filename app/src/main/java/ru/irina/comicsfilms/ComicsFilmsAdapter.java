@@ -39,6 +39,7 @@ public class ComicsFilmsAdapter extends ArrayAdapter{
 
 
 
+
     }
 
 }

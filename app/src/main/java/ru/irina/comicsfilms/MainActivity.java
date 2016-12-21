@@ -2,8 +2,12 @@ package ru.irina.comicsfilms;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.media.MediaMetadataCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -60,11 +64,33 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("КОМИКСЫ", choosedComicsFilm);
                 startActivity(intent);
 
+
             }
         });
 
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // создаём меню
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.sort_item:
+               Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent);
+
+                return true;
+            default:
+                return true;
+        }
     }
 
 }
