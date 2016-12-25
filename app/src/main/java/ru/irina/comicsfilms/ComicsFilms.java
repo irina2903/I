@@ -13,6 +13,10 @@ public class ComicsFilms implements Serializable {
     long бюджет;
     long сборы;
     boolean новыйФильм;
+    boolean displayScreenshots;
+    String screenshot1;
+    String screenshot2;
+    String screenshot3;
 
     public ComicsFilms(String title, String photo,String названииеКинокомпании,int годРелиза,long бюджет, long сборы, boolean новыйФильм) {
         this.title = title;

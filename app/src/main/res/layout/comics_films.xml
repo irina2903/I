@@ -5,47 +5,126 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="301dp">
+        android:layout_height="match_parent">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView2"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    </RelativeLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:id="@+id/imageView2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_weight="0.15"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:id="@+id/textView3"
-            android:layout_alignParentEnd="true" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:id="@+id/textView2"
-            android:layout_height="60dp"
-            android:layout_below="@+id/textView3"
-            android:layout_alignParentStart="true" />
+                    <TextView
+                        android:text="Название: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/background_dark" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:id="@+id/textView4"
-            android:layout_below="@+id/textView2"
-            android:layout_alignParentStart="true" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/title_text_view"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/holo_red_dark" />
 
-    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView2"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView3"
+                        android:layout_alignParentStart="true"
+                        android:text="Кинокомпания:"
+                        android:textColor="@android:color/background_dark" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/titleCompany"
+                        android:layout_below="@+id/textView2"
+                        android:layout_alignParentStart="true"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/holo_orange_dark" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        android:text="Год выпуска:"
+                        android:textColor="@android:color/background_dark" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/year_of_release"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/screenshot_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/screenshot_image_view_height"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:id="@+id/screenshot_1_image_view"
+                        android:layout_width="@dimen/screenshot_image_view_width"
+                        android:layout_height="@dimen/screenshot_image_view_height" />
+
+                    <ImageView
+                        android:id="@+id/screenshot_2_image_view"
+                        android:layout_width="@dimen/screenshot_image_view_width"
+                        android:layout_height="@dimen/screenshot_image_view_height" />
+
+                    <ImageView
+                        android:id="@+id/screenshot_3_image_view"
+                        android:layout_width="256dp"
+                        android:layout_height="256dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

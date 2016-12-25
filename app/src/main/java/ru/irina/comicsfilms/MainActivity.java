@@ -49,6 +49,38 @@ public class MainActivity extends AppCompatActivity {
         фильмы[12] = new ComicsFilms("Человек-муравей", "https://upload.wikimedia.org/wikipedia/ru/7/75/Ant-Man_poster.jpg", "Marvel Studios", 2015, 130000000, 519311965, false);
 
 
+        фильмы[0].screenshot1 = "https://pp.vk.me/c635104/v635104708/5c91/fXkD0nnIKPM.jpg";
+        фильмы[0].screenshot2 = "http://uakino.com/uploads/posts/2012-08/uakino.com_1344899302.jpg";
+        фильмы[0].screenshot3 = "http://www.moviemir.com/movies2000-2004/spider-man_2/s4.jpg";
+        фильмы[0].displayScreenshots = true;
+
+        фильмы[2].screenshot1 = "http://i.imgur.com/isIDKKw.jpg";
+        фильмы[2].screenshot2 = "http://kg-portal.ru/img/57218/00.jpg";
+        фильмы[2].screenshot3 = "http://2x2tv.ru/upload/medialibrary/8a9/8a98c5e6e6c082f5de68b5397b1e6f88.jpg";
+        фильмы[2].displayScreenshots = true;
+
+        фильмы[1].screenshot1 = "http://screenfor.me/wp-content/uploads/2016/10/screenforme-doctor-strange-copy.jpg";
+        фильмы[1].screenshot2 = "http://simhost.org/uploads/posts/2016-09/thumbs/1474312667_doktor.jpg";
+        фильмы[1].screenshot3 = "http://www.spletnik.ru/img/2016/07/polly/20160724-tra-2.jpg";
+        фильмы[1].displayScreenshots = true;
+
+        фильмы[3].screenshot1 = "https://cdnimg.rg.ru/i/gallery/88d50630/7_e971a28d.jpg";
+        фильмы[3].screenshot2 = "http://kor.ill.in.ua/m/610x385/1717821.jpg";
+        фильмы[3].screenshot3 = "http://s1.cdnnz.net/var/uploads/2016_images/05_01_1/civil_war1.jpg";
+        фильмы[3].displayScreenshots = true;
+
+        фильмы[4].screenshot1 = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT7qiRUsHRvLj7lRsMVSjq-upXNV6-ZDlVkTaxRGyh9WosCZppQ";
+        фильмы[4].screenshot2 = "http://media7.fast-torrent.ru/media/files/s4/bv/gs/tor-1-scene.jpg";
+        фильмы[4].screenshot3 = "https://www.film.ru/img/afisha/THOR/450/50.jpg";
+        фильмы[4].displayScreenshots = true;
+        
+
+
+
+
+
+
+
         ListView listView = (ListView) findViewById(R.id.ListView);
         int itemLayout = android.R.layout.simple_list_item_1;
         ArrayAdapter adapter = new ComicsFilmsAdapter(this, itemLayout, фильмы);
